@@ -1,4 +1,5 @@
-h1 {font-family: 'Josefin Slab', serif;}
+h1 {font-family: 'Josefin Slab', serif;
+margin-left: 20px;}
 h2 {font-family: 'Josefin Slab', serif;
 margin-left: 20px;}
 label {font-family: 'Josefin Slab', serif;
@@ -36,14 +37,12 @@ button:hover {
 }
 
 nav ul {
-    font-family: 'Josefin Slab', serif;
     list-style: none;
     font-size: xx-large;   
     font-weight: 500;
-    justify-content: center;
     display:flex;
-    gap: 80px;
-    align-items: flex-end;
+    justify-content: space-evenly;
+    align-items: flex-end;  
 }
 
 ul {
@@ -74,21 +73,23 @@ a {
 }
 
 /*Home*/
-
 .latestPostContainer {
     display: flex;
     justify-content: center;
     gap: 20px;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .fa-circle-chevron-left {
+    display: none;
     position: relative;
     right: -40px;
 }
 
 .fa-circle-chevron-right {
+    display: none;
     position: relative;
     right: 40px;
 }
@@ -98,18 +99,20 @@ a {
 }
 
 .postContainer {
-    width: 350px;
+    margin: 20px;
+    max-width: 350px;
     border: solid 1px;
 }
 .postContainer img{
-    width: 350px;
+    max-width: 350px;
+    margin: auto;
 }
 
 .postContainer h2 {
     margin: 20px;
 }
-/*recipes*/
 
+/*recipes*/
 .recipePostContainer {
     display: flex;
     flex-direction: column;
@@ -145,7 +148,6 @@ max-width: 400px;
 }
 
 /*About*/
-
 .aboutContainer {
     display: flex;
     margin-bottom: 20px;
@@ -218,4 +220,26 @@ footer i {
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        background-color: #F2F2F2;
+    }
+
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        font-size: large;
+        font-weight: 700;
+    }
+    .bubbles {
+        display: none;
+    }
 }
