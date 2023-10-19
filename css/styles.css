@@ -29,7 +29,7 @@ button {
     border: 0px;
     padding: 5px 40px;
     border-radius: 2rem;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 button:hover {
@@ -42,7 +42,10 @@ nav ul {
     font-weight: 500;
     display:flex;
     justify-content: space-evenly;
-    align-items: flex-end;  
+    align-items: flex-end; 
+    max-width: 900px; 
+    margin: auto;
+    padding: 20px 0px;
 }
 
 ul {
@@ -79,17 +82,15 @@ a {
     gap: 20px;
     align-items: center;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+
 }
 
 .fa-circle-chevron-left {
-    display: none;
     position: relative;
     right: -40px;
 }
 
 .fa-circle-chevron-right {
-    display: none;
     position: relative;
     right: 40px;
 }
@@ -99,13 +100,13 @@ a {
 }
 
 .postContainer {
-    margin: 20px;
+    margin: auto;
     max-width: 350px;
     border: solid 1px;
 }
 .postContainer img{
-    max-width: 350px;
-    margin: auto;
+    width: 100%;
+    height:auto;
 }
 
 .postContainer h2 {
@@ -117,33 +118,44 @@ a {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 20px 0px;
+    margin: auto 20px;
 }
 
 .recipeContainer {
     border: solid 2px;
     display: flex;
-    width: 800px;
+    width: auto;
 }
 
 .recipeContainer img{
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
+    height:auto;
+}
+
+.recipeInfoContainer {
+    flex-grow: 2;
 }
 
 /*specificRecipe*/
 .recipeInfo {
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recipeInfo img {
-max-width: 400px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin: 20px;
 }
 
 .underlineApproach {
     background-color: black;
     height: 2px;
+
+    margin: auto 20px ;
 
 }
 
@@ -151,10 +163,14 @@ max-width: 400px;
 .aboutContainer {
     display: flex;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .aboutContainer img {
     max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin: 20px;
 }
 
 /*Contact*/
@@ -170,14 +186,19 @@ max-width: 400px;
 .contactForm {
     display: flex;
     flex-direction: column;
+    margin: 0px 20px;
 }
 
 #eMailContact {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
 }
 
 #mesageContact {
-    width: 350px;
+   max-width: 350px;
+   width: 100%;
+   height: auto;
 }
 
 
@@ -220,6 +241,24 @@ footer i {
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .latestPostContainer {
+        flex-direction: column;
+    }
+
+    .fa-circle-chevron-left, .fa-circle-chevron-right{
+     opacity: 0%;
+    }
+
+    .recipeContainer {
+        flex-direction: column;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 600px) {
