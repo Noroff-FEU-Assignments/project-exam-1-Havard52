@@ -1,8 +1,6 @@
 const form = document.querySelector ("form");
-const eMailContact = document.querySelector ("#eMailContact");
+const eMailContact = document.querySelector ("#emailContact");
 const emailContactError= document.querySelector ("#emailContactError");
-const teleContact = document.querySelector ("#teleContact");
-const teleContactError = document.querySelector ("#teleContactError");
 const mesageContact = document.querySelector ("#mesageContact");
 const messageContactError = document.querySelector ("#messageContactError");
 const submitButton = document.querySelector ("#submitButton");
@@ -25,15 +23,12 @@ function contactValidation (event) {
    
     if (
     checkEmail(eMailContact.value) && 
-    checkValue(teleContact.value, 8) && 
     checkValue(mesageContact.value, 20)
     ){
     contactResponse.innerHTML = "Thank you for your feedback!";
-    contactResponse.style.color = "green";
     form.reset();
     } else {
-    contactResponse.innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
-    contactResponse.style.color = "#BA112A";
+    contactResponse.innerHTML = `Please fill in the form correctly`;
     }
 };
 

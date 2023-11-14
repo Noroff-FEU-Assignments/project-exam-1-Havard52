@@ -283,6 +283,14 @@ margin: auto;
    height: auto;
 }
 
+#emailContactError{
+    display: none;
+}
+
+#messageContactError {
+    display: none;
+}
+
 
 /*main*/
 main{
@@ -360,6 +368,9 @@ footer i {
         font-weight: 700;
     }
     .bubbles {
+        display: none;
+    }
+    .breadcrumbs {
         display: none;
     }
 }
