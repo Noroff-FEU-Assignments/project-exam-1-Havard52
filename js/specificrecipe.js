@@ -1,5 +1,6 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
+const breadcrumbs =document.querySelector(".breadcrumbs");
 const id = params.get("id");
 
 
@@ -12,6 +13,7 @@ async function getRecipes (url){
     const recipe = await response.json();
     console.log(recipe);
     createHtml(recipe);
+    breadcrumbsUrl (recipe);
 
 }catch (error){
     console.error
@@ -62,4 +64,13 @@ function createHtml (recipe){
     ${recipe.recipe.instructions_flat.map (instruction => `<p>${instruction.text}</p>`) .join('') }
   </div>`;
 }
+
+function breadcrumbsUrl (recipe) {
+    breadcrumbs.innerHTML += `
+    <a href="index.html">Home > </a>
+    <a href="recipes.html">Recipes ></a>
+    <a href="specificrecipe.html?id=${recipe.id}">${recipe.recipe.name}</a>
+    `;
+}
+
 getRecipes(baseUrl);

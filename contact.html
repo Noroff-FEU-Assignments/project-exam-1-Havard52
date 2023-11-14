@@ -39,25 +39,27 @@
     </div>
     <main>
       <H1>Contact</H1>
-      <Section class="contactContainer">
+      <form class="contactContainer">
         <div class="textContainer">
           <p>sfdg s gdgs  jsflj sfhs dlfjfj  s fhskhfsk fhs </p>
           <p>gj shgsk fglsdd gs fhhsfkfhskhfhfhsk fhf  skfdhskfhs kfh</p>
         </div>
         <div>
           <div class="contactForm">
-          <label for="E-mail1">E-mail:</label>
-            <input type="text" name="E-mail1" id="eMailContact"/>
+          <label for="E-mail">E-mail:</label>
+            <input type="text" name="E-mail" id="emailContact"/>
+            <div class="form-error" id="emailContactError">E-mail must include @ and at least one period</div>
           </div>
           <div class="contactForm">
             <label for="Message">Message:</label>
             <textarea name="Message" id="mesageContact" cols="20" rows="10"></textarea>
+            <div class="form-error" id="messageContactError">The message must be over 20 charters</div>
           </div>
           <div>
             <button>Submit</button>
           </div>
         </div>
-      </Section> 
+      </form> 
     </main>
     <footer>
         <nav>
@@ -73,6 +75,6 @@
             <i class="fa-brands fa-twitter"></i>
           </div>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
