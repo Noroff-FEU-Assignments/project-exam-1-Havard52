@@ -1,15 +1,18 @@
 const recipeContainer = document.querySelector(".arrayOfPosts");
 const previousButton = document.querySelector("#previousButton");
 const nextButton = document.querySelector("#nextButton");
+
 const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe";
+const proxy = "https://noroffcors.onrender.com/";
+const corsFix = proxy + baseUrl;
 
 let counter = 0;
 let recipes; 
 
 
-async function getRecipes(url) {
+async function getRecipes(corsFix) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(corsFix);
         recipes = await response.json(); 
         makeRecipesVisible(recipes);
 
