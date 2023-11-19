@@ -34,7 +34,7 @@ function createHtml (recipe){
     <i class="fa-solid fa-star"></i>
     <i class="fa-solid fa-star"></i>
 </div>
-<div>
+<div class="recipeInfoContainers">
 <img src="${recipe.recipe.image_url}" alt="picture of ${recipe.recipe.name}" id="recipeImage" class="imageModuleAppear">
 </div>
 <div class="recipeInfoContainers">

@@ -178,10 +178,11 @@ a {
 }
 
 #recipeImage { 
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: 20px;
+    margin-right: 20px;
 }
+
 .imageModuleAppear {
     transition: transform 0.5s ease;
 }
@@ -204,8 +205,7 @@ a {
 }
 
 .ingrediensContainer {
-    color: white;
-    background-color: #047388;
+    background-color: #80E7F2;
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
@@ -300,11 +300,7 @@ margin: auto;
    height: auto;
 }
 
-#emailContactError{
-    display: none;
-}
-
-#messageContactError {
+#emailContactError, #messageContactError, #nameContactError, #subjectContactError {
     display: none;
 }
 
