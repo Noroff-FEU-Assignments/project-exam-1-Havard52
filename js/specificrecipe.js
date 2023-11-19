@@ -5,7 +5,7 @@ const recipeInfo = document.querySelector(".recipeInfo");
 const bodyBlur = document.querySelector("body");
 const id = params.get("id");
 
-const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe/" + id;
+const baseUrl = "https://rainyvavik.no/mealpreppers/wp-json/wp/v2/wprm_recipe/" + id;
 const proxy = "https://noroffcors.onrender.com/";
 const corsFix = proxy + baseUrl;
 
