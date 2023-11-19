@@ -10,9 +10,9 @@ let counter = 0;
 let recipes; 
 
 
-async function getRecipes(corsFix) {
+async function getRecipes(url) {
     try {
-        const response = await fetch(corsFix);
+        const response = await fetch(url);
         recipes = await response.json(); 
         makeRecipesVisible(recipes);
 
@@ -53,4 +53,4 @@ function showNextRecipes() {
     makeRecipesVisible(recipes);
 }
 
-getRecipes(baseUrl);
+getRecipes(corsFix);
