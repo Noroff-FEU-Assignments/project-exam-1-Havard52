@@ -2,7 +2,7 @@ const recipeContainer = document.querySelector(".arrayOfPosts");
 const previousButton = document.querySelector("#previousButton");
 const nextButton = document.querySelector("#nextButton");
 
-const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe";
+const baseUrl = "https://rainyvavik.no/mealpreppers/wp-json/wp/v2/wprm_recipe";
 const proxy = "https://noroffcors.onrender.com/";
 const corsFix = proxy + baseUrl;
 
