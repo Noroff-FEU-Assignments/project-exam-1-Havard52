@@ -6,6 +6,8 @@ const bodyBlur = document.querySelector("body");
 const id = params.get("id");
 
 const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe/" + id;
+const proxy = "https://noroffcors.onrender.com/";
+const corsFix = proxy + baseUrl;
 
 async function getRecipes (url){
     try {
@@ -87,5 +89,5 @@ function breadcrumbsUrl (recipe) {
     `;
 }
 
-getRecipes(baseUrl);
+getRecipes(corsFix);
 

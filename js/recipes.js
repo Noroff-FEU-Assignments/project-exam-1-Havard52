@@ -1,7 +1,10 @@
 const recipeContainer = document.querySelector(".recipePostContainer");
 const morePostsButton = document.querySelector("#morePostsButton");
 const spinner = document.querySelector (".waitSpinner");
+
 const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe";
+const proxy = "https://noroffcors.onrender.com/";
+const corsFix = proxy + baseUrl;
 
 let index = 0;
 let recipes;
@@ -50,5 +53,5 @@ function showMorePosts (){
   makePostsVisible(recipes);
 };
 
-getRecipes(baseUrl);
+getRecipes(corsFix);
 
