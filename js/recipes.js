@@ -20,7 +20,7 @@ catch (error){
 
 
 function makePostsVisible (recipes){
-for (let i =index; i< Math.min(index + 5, recipes.length); i++)
+for (let i =index; i< Math.min(index + 10, recipes.length); i++)
 {
   spinner.style.display = "none";
   

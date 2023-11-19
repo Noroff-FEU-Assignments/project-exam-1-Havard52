@@ -28,7 +28,7 @@ function contactValidation (event) {
     contactResponse.innerHTML = "Thank you for your feedback!";
     form.reset();
     } else {
-    contactResponse.innerHTML = `Please fill in the form correctly`;
+    contactResponse.innerHTML = `Please fill in the form correctly.`;
     }
 };
 

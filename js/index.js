@@ -3,7 +3,7 @@ const previousButton = document.querySelector("#previousButton");
 const nextButton = document.querySelector("#nextButton");
 const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe";
 
-let index = 0;
+let counter = 0;
 let recipes; 
 
 
@@ -23,7 +23,7 @@ async function getRecipes(url) {
 function makeRecipesVisible(recipes) {
     recipeContainer.innerHTML = "";
 
-    for (let i = index; i < Math.min(index + 3, recipes.length); i++) {
+    for (let i = counter; i < counter + 3; i++) {
         const recipe = recipes[i];
         recipeContainer.innerHTML += `
             <a href="specificrecipe.html?id=${recipe.id}" class="postContainer">        
@@ -38,16 +38,15 @@ function makeRecipesVisible(recipes) {
                     ${recipe.recipe.notes}
                 </div>
             </a>
-        `;
-    }}
+        `;}}
 
 function showPreviousRecipes() {
-    index = (index - 3 + recipes.length) % recipes.length;
+    counter = (counter - 3 + recipes.length) % recipes.length;
     makeRecipesVisible(recipes);
-}
+};
 
 function showNextRecipes() {
-    index = (index + 3) % recipes.length;
+    counter = (counter + 3) % recipes.length;
     makeRecipesVisible(recipes);
 }
 

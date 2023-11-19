@@ -1,10 +1,10 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const breadcrumbs =document.querySelector(".breadcrumbs");
+const recipeInfo = document.querySelector(".recipeInfo");
+const bodyBlur = document.querySelector("body");
 const id = params.get("id");
 
-
-const recipeInfo = document.querySelector(".recipeInfo");
 const baseUrl = "http://localhost/mealPreppers/wordpress/wp-json/wp/v2/wprm_recipe/" + id;
 
 async function getRecipes (url){
@@ -14,6 +14,7 @@ async function getRecipes (url){
     console.log(recipe);
     createHtml(recipe);
     breadcrumbsUrl (recipe);
+    createImageModule(recipe);
 
 }catch (error){
     console.error
@@ -32,7 +33,7 @@ function createHtml (recipe){
     <i class="fa-solid fa-star"></i>
 </div>
 <div>
-    <img src="${recipe.recipe.image_url}" alt="${recipe.recipe.name}">
+<img src="${recipe.recipe.image_url}" alt="picture of ${recipe.recipe.name}" id="recipeImage" class="imageModuleAppear">
 </div>
 <div class="recipeInfoContainers">
     <div class="macros">
@@ -63,6 +64,19 @@ function createHtml (recipe){
     <div class="underlineApproach"></div>
     ${recipe.recipe.instructions_flat.map (instruction => `<p>${instruction.text}</p>`) .join('') }
   </div>`;
+
+  const recipeImage = document.getElementById("recipeImage");
+
+  recipeImage.addEventListener("click", function(){
+    recipeImage.classList.toggle("imageModule");
+  });
+
+  document.body.addEventListener("click", function(imageModuledisappear) {
+    if (!recipeImage.contains(imageModuledisappear.target)) {
+        recipeImage.classList.remove("imageModule");   
+    }
+});
+
 }
 
 function breadcrumbsUrl (recipe) {
@@ -74,3 +88,4 @@ function breadcrumbsUrl (recipe) {
 }
 
 getRecipes(baseUrl);
+
