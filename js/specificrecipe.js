@@ -2,7 +2,6 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const breadcrumbs =document.querySelector(".breadcrumbs");
 const recipeInfo = document.querySelector(".recipeInfo");
-const bodyBlur = document.querySelector("body");
 const id = params.get("id");
 
 const baseUrl = "https://rainyvavik.no/mealpreppers/wp-json/wp/v2/wprm_recipe/" + id;
@@ -17,15 +16,13 @@ async function getRecipes (url){
     createHtml(recipe);
     breadcrumbsUrl (recipe);
     createImageModule(recipe);
-
 }catch (error){
     console.error
     ("Error fetching products:", error);
-}}
+}};
 
 function createHtml (recipe){
     recipeInfo.innerHTML += `
-
 <div>
     <H1>${recipe.recipe.name}</H1>
 </div>
@@ -71,15 +68,14 @@ function createHtml (recipe){
 
   recipeImage.addEventListener("click", function(){
     recipeImage.classList.toggle("imageModule");
+
   });
 
   document.body.addEventListener("click", function(imageModuledisappear) {
     if (!recipeImage.contains(imageModuledisappear.target)) {
         recipeImage.classList.remove("imageModule");   
     }
-});
-
-}
+})}
 
 function breadcrumbsUrl (recipe) {
     breadcrumbs.innerHTML += `
