@@ -10,15 +10,15 @@ My first project exam. The website is built with html, css and javascript. The l
 
 ## Built With
 
-- [adobeXD](https://helpx.adobe.com/no/xd/)
+- [AdobeXD](https://helpx.adobe.com/no/xd/)
 - [VisualStudioCode](https://code.visualstudio.com/)
 - [Javascript](https://www.javascript.com/)
 - [Netlify](https://www.netlify.com/)
 - [Hotjar](https://www.hotjar.com/)
 - [Github](https://github.com/)
 - [Wordpress](https://wordpress.org/)
-- [HTML]
-- [CSS]
+- HTML
+- CSS
 
 
 ## Getting Started
