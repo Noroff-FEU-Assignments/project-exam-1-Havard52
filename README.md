@@ -54,15 +54,10 @@ npm run start
 Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
 
 ## Contact
-Phone: +47 97 60 31 28
+Phone: +47 97 60 31 28, 
 E-mail: vavik13304@gmail.com
 
 [My LinkedIn page](www.linkedin.com/in/håvard-vavik-9a0401126)
 
-## License
 
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
 
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
