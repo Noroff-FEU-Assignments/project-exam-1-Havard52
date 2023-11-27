@@ -2,24 +2,24 @@
 
 ![image](images/Logo.png)
 
-A simple overview of the use/purpose of the project.
-
+MealPreppers - Fitness food for people on the go
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+My first project exam. The website is built with html, css and javascript. The list of recipes is taken from wordpress's rest api.
 
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
 
 ## Built With
 
-You can list a the tech stack that you've used over here
+- [adobeXD] (https://helpx.adobe.com/no/xd/)
+- [VisualStudioCode] (https://code.visualstudio.com/)
+- [Javascript](https://www.javascript.com/)
+- [Netlify] (https://www.netlify.com/)
+- [Hotjar] (https://www.hotjar.com/)
+- [Github] (https://github.com/)
+- [Wordpress] (https://wordpress.org/)
+- [HTML]
+- [CSS]
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
 
 ## Getting Started
 
